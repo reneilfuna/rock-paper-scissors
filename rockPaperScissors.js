@@ -48,44 +48,39 @@ function getHumanChoice() {
         console.log("Human choice error!");
 }
 
-// Declare the player score variables
-
-let humanScore = 0;
-let computerScore = 0;
-
 // Write the logic to play a single round
 
 function playRound(computerChoice, humanChoice) {
 // Function that plays 1 round of the game
 // Takes player & computer score as arguments  
 
-// if computer choice = human choice
-if (computerChoice == humanChoice){
-    // return "draw message"
-    console.log(`Draw! You played the same move as computer.`);
-}
-// if computer choice beats human choice 
-else if (computerChoice == "rock" && humanChoice == "scissors" || 
-         computerChoice == "paper" && humanChoice == "rock"    ||
-         computerChoice == "scissors" && humanChoice == "paper"
-        ) {
-    // return "you lose message"
-    console.log(`You lose! ${computerChoice} beats ${humanChoice}!`);
-    // increment computer score
-    computerScore++;
-}
-// if computer choice concedes human choice
-else if (humanChoice == "rock" && computerChoice == "scissors" || 
-         humanChoice == "paper" && computerChoice == "rock"    ||
-         humanChoice == "scissors" && computerChoice == "paper"
-        ) {
-    // return "you win message"
-    console.log(`You win! ${humanChoice} beats ${computerChoice}!`);
-    // increment human score
-    humanScore++;
-}
-else
-    console.log("Round Failed!")
+    // if computer choice = human choice
+    if (computerChoice == humanChoice){
+        // return "draw message"
+        console.log(`Draw! You played the same move as computer.`);
+    }
+    // if computer choice beats human choice 
+    else if (computerChoice == "rock" && humanChoice == "scissors" || 
+            computerChoice == "paper" && humanChoice == "rock"    ||
+            computerChoice == "scissors" && humanChoice == "paper"
+            ) {
+        // return "you lose message"
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}!`);
+        // increment computer score
+        computerScore++;
+    }
+    // if computer choice concedes human choice
+    else if (humanChoice == "rock" && computerChoice == "scissors" || 
+            humanChoice == "paper" && computerChoice == "rock"    ||
+            humanChoice == "scissors" && computerChoice == "paper"
+            ) {
+        // return "you win message"
+        console.log(`You win! ${humanChoice} beats ${computerChoice}!`);
+        // increment human score
+        humanScore++;
+    }
+    else
+        console.log("Round Failed!")
 
 }
 
@@ -101,7 +96,8 @@ function playRound(){
 // keep track of score, and declare a winner.
 
 // Initialise/Reset player scores
-
+    let humanScore = 0;
+    let computerScore = 0;
 // Call playRound
 // Update scores
 // x5
