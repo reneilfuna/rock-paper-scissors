@@ -27,7 +27,7 @@ function getComputerChoice() {
         return choice;
     }
     else
-        console.log("Wait a minute...");
+        console.log("Computer Choice error!");
 }
 
 console.log(getComputerChoice())
@@ -47,7 +47,7 @@ function getHumanChoice() {
         return userChoice;
     }
     else 
-        console.log("Wait a minute...");
+        console.log("Human choice error!");
 }
 
 console.log(getHumanChoice())
@@ -66,20 +66,39 @@ function playRound(computerChoice, humanChoice) {
 // if computer choice = human choice
 if (computerChoice == humanChoice){
     // return "draw message"
-    console.log(`Draw! You played the same move as computer.`)
+    console.log(computerChoice)
+    console.log(humanChoice)
+    console.log(`Draw! You played the same move as computer.`);
 }
 // if computer choice beats human choice 
-else if (computerChoice == "rock" && humanChoice == "scissors") {
+else if (computerChoice == "rock" && humanChoice == "scissors" || 
+         computerChoice == "paper" && humanChoice == "rock"    ||
+         computerChoice == "scissors" && humanChoice == "paper"
+        ) {
     // return "you lose message"
-    console.log(`You lose! ${computerChoice} beats ${humanChoice}`)
+    console.log(`You lose! ${computerChoice} beats ${humanChoice}!`);
     // increment computer score
+    computerScore++;
 }
 // if computer choice concedes human choice
+else if (humanChoice == "rock" && computerChoice == "scissors" || 
+         humanChoice == "paper" && computerChoice == "rock"    ||
+         humanChoice == "scissors" && computerChoice == "paper"
+        ) {
     // return "you win message"
+    console.log(`You win! ${humanChoice} beats ${computerChoice}!`);
     // increment human score
+    humanScore++;
+}
+else
+    console.log("Round Failed!")
 
 }
 
+const computerMove = getComputerChoice();
+const humanMove = getHumanChoice();
+
+playRound(computerMove, humanMove);
 
 
 
