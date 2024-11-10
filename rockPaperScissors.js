@@ -39,10 +39,15 @@ function getHumanChoice() {
 
     // Prompt user for choice between rock, paper, or scissors
     // Store the user choice into variable
-
+    let choice = prompt("Rock, paper, or scissors?");
     // Check if user entered valid input
-
-    // Return the variable
+    if (choice.toLowerCase() == "rock" || choice.toLowerCase() == "paper" || choice.toLowerCase() == "scissors"){
+        let userChoice = choice.toLowerCase();
+        // Return the variable
+        return userChoice;
+    }
+    else 
+        console.log("Wait a minute...");
 }
 
 // Declare the player score variables
