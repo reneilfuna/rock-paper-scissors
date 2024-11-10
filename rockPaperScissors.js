@@ -54,6 +54,9 @@ function playRound(computerChoice, humanChoice) {
 // Function that plays 1 round of the game
 // Takes player & computer score as arguments  
 
+    // Declare score variables:
+    var humanScore;
+    var computerScore;
     // if computer choice = human choice
     if (computerChoice == humanChoice){
         // return "draw message"
@@ -91,7 +94,7 @@ function playRound(computerChoice, humanChoice) {
 
 // Write the logic to play an entire game
 
-function playRound(){
+function playGame(){
 // Function to play an entire game of 5 round, 
 // keep track of score, and declare a winner.
 
@@ -102,7 +105,11 @@ function playRound(){
 // Update scores
 // x5
 for (i = 0; i < 5; i++){
-    console.log(`${i}`)
+    const computerMove = getComputerChoice();
+    const humanMove = getHumanChoice();
+    playRound(computerMove, humanMove);
+    console.log(`Player Score: ${humanScore}`);
+    console.log(`Computer Score: ${computerScore}`);
 }
 
 // Check final player scores
@@ -110,4 +117,4 @@ for (i = 0; i < 5; i++){
 // Determine game outcome
 }
 
-playRound();
+playGame();
