@@ -62,8 +62,6 @@ function playRound(computerChoice, humanChoice) {
 // if computer choice = human choice
 if (computerChoice == humanChoice){
     // return "draw message"
-    console.log(computerChoice)
-    console.log(humanChoice)
     console.log(`Draw! You played the same move as computer.`);
 }
 // if computer choice beats human choice 
@@ -72,8 +70,6 @@ else if (computerChoice == "rock" && humanChoice == "scissors" ||
          computerChoice == "scissors" && humanChoice == "paper"
         ) {
     // return "you lose message"
-    console.log(computerChoice)
-    console.log(humanChoice)
     console.log(`You lose! ${computerChoice} beats ${humanChoice}!`);
     // increment computer score
     computerScore++;
@@ -84,8 +80,6 @@ else if (humanChoice == "rock" && computerChoice == "scissors" ||
          humanChoice == "scissors" && computerChoice == "paper"
         ) {
     // return "you win message"
-    console.log(computerChoice)
-    console.log(humanChoice)
     console.log(`You win! ${humanChoice} beats ${computerChoice}!`);
     // increment human score
     humanScore++;
