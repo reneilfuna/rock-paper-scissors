@@ -50,6 +50,8 @@ function getHumanChoice() {
         console.log("Wait a minute...");
 }
 
+console.log(getHumanChoice())
+
 // Declare the player score variables
 
 
