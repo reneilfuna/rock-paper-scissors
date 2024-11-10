@@ -4,10 +4,6 @@ console.log("Wagwan g")
 
 // Logic to get computer choice
 
-
-
-// Logic to get human choice
-
 function getComputerChoice() {
     // Function that randomly returns a string value of "rock", "scissors", or, "paper"
 
@@ -33,6 +29,10 @@ function getComputerChoice() {
     else
         console.log("Wait a minute...");
 }
+
+console.log(getComputerChoice())
+
+// Logic to get human choice
 
 // Declare the player score variables
 
