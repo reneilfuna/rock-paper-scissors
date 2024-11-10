@@ -30,8 +30,6 @@ function getComputerChoice() {
         console.log("Computer Choice error!");
 }
 
-console.log(getComputerChoice())
-
 // Logic to get human choice
 
 function getHumanChoice() {
@@ -49,8 +47,6 @@ function getHumanChoice() {
     else 
         console.log("Human choice error!");
 }
-
-console.log(getHumanChoice())
 
 // Declare the player score variables
 
@@ -76,6 +72,8 @@ else if (computerChoice == "rock" && humanChoice == "scissors" ||
          computerChoice == "scissors" && humanChoice == "paper"
         ) {
     // return "you lose message"
+    console.log(computerChoice)
+    console.log(humanChoice)
     console.log(`You lose! ${computerChoice} beats ${humanChoice}!`);
     // increment computer score
     computerScore++;
@@ -86,6 +84,8 @@ else if (humanChoice == "rock" && computerChoice == "scissors" ||
          humanChoice == "scissors" && computerChoice == "paper"
         ) {
     // return "you win message"
+    console.log(computerChoice)
+    console.log(humanChoice)
     console.log(`You win! ${humanChoice} beats ${computerChoice}!`);
     // increment human score
     humanScore++;
