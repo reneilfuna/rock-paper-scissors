@@ -64,15 +64,23 @@ function playRound(computerChoice, humanChoice) {
 // Takes player & computer score as arguments  
 
 // if computer choice = human choice
+if (computerChoice == humanChoice){
     // return "draw message"
+    console.log(`Draw! You played the same move as computer.`)
+}
 // if computer choice beats human choice 
+else if (computerChoice == "rock" && humanChoice == "scissors") {
     // return "you lose message"
+    console.log(`You lose! ${computerChoice} beats ${humanChoice}`)
     // increment computer score
+}
 // if computer choice concedes human choice
     // return "you win message"
     // increment human score
 
 }
+
+
 
 
 // Write the logic to play an entire game
