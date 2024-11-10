@@ -57,9 +57,22 @@ console.log(getHumanChoice())
 let humanScore = 0;
 let computerScore = 0;
 
-
 // Write the logic to play a single round
 
+function playRound(computerChoice, humanChoice) {
+// Function that plays 1 round of the game
+// Takes player & computer score as arguments  
+
+// if computer choice = human choice
+    // return "draw message"
+// if computer choice beats human choice 
+    // return "you lose message"
+    // increment computer score
+// if computer choice concedes human choice
+    // return "you win message"
+    // increment human score
+
+}
 
 
 // Write the logic to play an entire game
