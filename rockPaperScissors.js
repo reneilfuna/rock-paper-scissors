@@ -101,8 +101,13 @@ function playRound(){
 // Call playRound
 // Update scores
 // x5
+for (i = 0; i < 5; i++){
+    console.log(`${i}`)
+}
 
 // Check final player scores
 
 // Determine game outcome
 }
+
+playRound();
