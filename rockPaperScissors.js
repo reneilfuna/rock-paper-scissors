@@ -89,11 +89,24 @@ else
 
 }
 
-const computerMove = getComputerChoice();
-const humanMove = getHumanChoice();
+// const computerMove = getComputerChoice();
+// const humanMove = getHumanChoice();
 
-playRound(computerMove, humanMove);
-
-
+// playRound(computerMove, humanMove);
 
 // Write the logic to play an entire game
+
+function playRound(){
+// Function to play an entire game of 5 round, 
+// keep track of score, and declare a winner.
+
+// Initialise/Reset player scores
+
+// Call playRound
+// Update scores
+// x5
+
+// Check final player scores
+
+// Determine game outcome
+}
