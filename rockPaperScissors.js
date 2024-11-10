@@ -8,7 +8,7 @@ console.log("Wagwan g")
 
 // Logic to get human choice
 
-function getComputerChoice {
+function getComputerChoice() {
     // Function that randomly returns a string value of "rock", "scissors", or, "paper"
 
     // Generate random number between 0 and 1
