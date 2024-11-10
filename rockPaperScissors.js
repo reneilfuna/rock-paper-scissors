@@ -34,6 +34,17 @@ console.log(getComputerChoice())
 
 // Logic to get human choice
 
+function getHumanChoice() {
+// Function that asks user for choice and then returns the given value
+
+    // Prompt user for choice between rock, paper, or scissors
+    // Store the user choice into variable
+
+    // Check if user entered valid input
+
+    // Return the variable
+}
+
 // Declare the player score variables
 
 
