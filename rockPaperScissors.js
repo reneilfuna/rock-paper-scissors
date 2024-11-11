@@ -112,7 +112,6 @@ function playGame(){
 // Update scores
 // x5
 for (i = 0; i < 5; i++){
-    console.log(`Round ${i+1}:`)
     const computerMove = getComputerChoice();
     const humanMove = getHumanChoice();
     if (computerMove == 3 || humanMove == 3){
@@ -120,6 +119,7 @@ for (i = 0; i < 5; i++){
         console.log("Game aborted!")
         break;
     }
+    console.log(`Round ${i+1}:`)
     // playRound(computerMove, humanMove);
     roundScore = playRound(computerMove, humanMove);
     // check whether playRound returns computerScore or humanScore
@@ -133,6 +133,7 @@ for (i = 0; i < 5; i++){
     }
     console.log(`Computer Score: ${computerScore}`);
     console.log(`Player Score: ${humanScore}`);
+    console.log("\n")
 }
 if (i != 5){
     return;
