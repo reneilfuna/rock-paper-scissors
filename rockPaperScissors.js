@@ -1,5 +1,3 @@
-console.log("Wagwan g")
-
 // A Rock Paper Scissors game played entirely in the console.
 
 // Logic to get computer choice
