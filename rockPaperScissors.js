@@ -87,11 +87,6 @@ function playRound(computerChoice, humanChoice) {
 
 }
 
-// const computerMove = getComputerChoice();
-// const humanMove = getHumanChoice();
-
-// playRound(computerMove, humanMove);
-
 // Write the logic to play an entire game
 
 function playGame(){
@@ -105,6 +100,7 @@ function playGame(){
 // Update scores
 // x5
 for (i = 0; i < 5; i++){
+    console.log(`Round ${i+1}:`)
     const computerMove = getComputerChoice();
     const humanMove = getHumanChoice();
     playRound(computerMove, humanMove);
