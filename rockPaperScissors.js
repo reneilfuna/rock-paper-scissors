@@ -87,6 +87,18 @@ function playRound(computerChoice, humanChoice) {
 
 }
 
+function decideGame(computerFinalScore, humanFinalScore){
+    console.log("\n")
+    console.log("Game completed.")
+    console.log(`Final Score: ${computerFinalScore}-${humanFinalScore}`)
+    if (computerFinalScore > humanFinalScore)    
+        console.log("Unlucky! Computer wins!")
+    else if (computerFinalScore < humanFinalScore)
+        console.log("Well done! You win!")
+    else if (computerFinalScore == humanFinalScore)
+        console.log("Nice try. Draw with computer.")
+}
+
 // Write the logic to play an entire game
 
 function playGame(){
@@ -119,13 +131,14 @@ for (i = 0; i < 5; i++){
         console.log('Error calculating score')
         break;
     }
-    console.log(`Player Score: ${humanScore}`);
     console.log(`Computer Score: ${computerScore}`);
+    console.log(`Player Score: ${humanScore}`);
+}
+if (i != 5){
+    return;
 }
 
-// Check final player scores
-
-// Determine game outcome
+decideGame(computerScore, humanScore);
 }
 
 playGame();
