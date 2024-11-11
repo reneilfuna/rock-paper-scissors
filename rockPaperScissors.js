@@ -108,9 +108,10 @@ for (i = 0; i < 5; i++){
         computerScore++;
     else if (roundScore == 1)
         humanScore++;
-    else
+    else if (roundScore != 0 && roundScore != 1 && roundScore != 2){
         console.log('Error calculating score')
-
+        break;
+    }
     console.log(`Player Score: ${humanScore}`);
     console.log(`Computer Score: ${computerScore}`);
 }
