@@ -26,8 +26,9 @@ function getComputerChoice() {
         choice = "scissors";
         return choice;
     }
-    else
-        console.log("Computer Choice error!");
+    else{
+        return 3;
+    }
 }
 
 // Logic to get human choice
@@ -44,8 +45,9 @@ function getHumanChoice() {
         // Return the variable
         return userChoice;
     }
-    else 
-        console.log("Human choice error!");
+    else{
+        return 3;
+    }
 }
 
 // Write the logic to play a single round
@@ -101,6 +103,11 @@ for (i = 0; i < 5; i++){
     console.log(`Round ${i+1}:`)
     const computerMove = getComputerChoice();
     const humanMove = getHumanChoice();
+    if (computerMove == 3 || humanMove == 3){
+        console.log("Invalid user or computer choice!")
+        console.log("Game aborted!")
+        break;
+    }
     // playRound(computerMove, humanMove);
     roundScore = playRound(computerMove, humanMove);
     // check whether playRound returns computerScore or humanScore
