@@ -54,13 +54,11 @@ function playRound(computerChoice, humanChoice) {
 // Function that plays 1 round of the game
 // Takes player & computer score as arguments  
 
-    // Declare score variables:
-    var humanScore;
-    var computerScore;
     // if computer choice = human choice
     if (computerChoice == humanChoice){
         // return "draw message"
         console.log(`Draw! You played the same move as computer.`);
+        return 2;
     }
     // if computer choice beats human choice 
     else if (computerChoice == "rock" && humanChoice == "scissors" || 
@@ -70,7 +68,7 @@ function playRound(computerChoice, humanChoice) {
         // return "you lose message"
         console.log(`You lose! ${computerChoice} beats ${humanChoice}!`);
         // increment computer score
-        computerScore++;
+        return 0;
     }
     // if computer choice concedes human choice
     else if (humanChoice == "rock" && computerChoice == "scissors" || 
@@ -80,7 +78,7 @@ function playRound(computerChoice, humanChoice) {
         // return "you win message"
         console.log(`You win! ${humanChoice} beats ${computerChoice}!`);
         // increment human score
-        humanScore++;
+        return 1;
     }
     else
         console.log("Round Failed!")
@@ -103,7 +101,16 @@ for (i = 0; i < 5; i++){
     console.log(`Round ${i+1}:`)
     const computerMove = getComputerChoice();
     const humanMove = getHumanChoice();
-    playRound(computerMove, humanMove);
+    // playRound(computerMove, humanMove);
+    roundScore = playRound(computerMove, humanMove);
+    // check whether playRound returns computerScore or humanScore
+    if (roundScore == 0)
+        computerScore++;
+    else if (roundScore == 1)
+        humanScore++;
+    else
+        console.log('Error calculating score')
+
     console.log(`Player Score: ${humanScore}`);
     console.log(`Computer Score: ${computerScore}`);
 }
