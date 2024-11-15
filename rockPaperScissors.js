@@ -24,9 +24,7 @@ function getComputerChoice() {
         choice = "scissors";
         return choice;
     }
-    else{
-        return 3;
-    }
+    
 }
 
 // Logic to get human choice
@@ -140,7 +138,7 @@ function decideGame(computerFinalScore, humanFinalScore){
 // decideGame(computerScore, humanScore);
 // }
 
-const Menu = document.querySelector("div");
+const Menu = document.getElementById("Menu");
 const rockBtn = document.createElement("button");
 rockBtn.textContent = "ROCK";
 const paperBtn = document.createElement("button");
@@ -148,35 +146,50 @@ paperBtn.textContent = "PAPER";
 const scissorBtn = document.createElement("button");
 scissorBtn.textContent = "SCISSORS";
 
+const results = document.createElement("div");
+// Display choide for computer move
+const computerChoiceDisplay = document.createElement("pre");
+// Display choice for player move
+const playerChoiceDisplay = document.createElement("pre");
+// Display game scores
+const scoreDisplay = document.createElement("div");
+
 Menu.addEventListener("click", (event) => {
     let target = event.target;
     const computerMove = getComputerChoice();
     let playerMove;
+    computerChoiceDisplay.textContent = `Computer's Move: ${computerMove}`;
     switch(target){
         case rockBtn:
-            console.log("Player chose rock!");
             // call rock as player move
             playerMove = "rock";
+            playerChoiceDisplay.textContent = `Your Move: ${playerMove}`;
             // call play round
             playRound(computerMove, playerMove);
             break;
         case paperBtn:
-            console.log("Player chose paper!");
             // call paper as player move
             playerMove = "paper";
+            playerChoiceDisplay.textContent = `Your Move: ${playerMove}`;
             // call playRound
             playRound(computerMove, playerMove);
             break;
         case scissorBtn:
-            console.log("Player chose scissors!");
             // call paper as player move
             playerMove = "scissors";
+            playerChoiceDisplay.textContent = `Your Move: ${playerMove}`;
             // call playRound
             playRound(computerMove, playerMove);
             break;
     }
 })
 
+// Computer Choice Display
+
 Menu.appendChild(rockBtn);
 Menu.appendChild(paperBtn);
 Menu.appendChild(scissorBtn);
+results.appendChild(computerChoiceDisplay);
+results.appendChild(playerChoiceDisplay);
+results.appendChild(scoreDisplay);
+document.body.appendChild(results);
