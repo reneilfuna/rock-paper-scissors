@@ -153,6 +153,18 @@ rockBtn.addEventListener("click", function (){
     // Call playRound
 });
 
+paperBtn.addEventListener("click", function (){
+    // Call computer move
+    // Call Paper player choice
+    // Call playRound
+});
+
+scissorBtn.addEventListener("click", function (){
+    // Call computer move
+    // Call Scissors player choice
+    // Call playRound
+});
+
 document.body.appendChild(rockBtn);
 document.body.appendChild(paperBtn);
 document.body.appendChild(scissorBtn);
