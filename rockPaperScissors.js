@@ -95,9 +95,6 @@ function decideGame(computerFinalScore, humanFinalScore){
         console.log("Nice try. Draw with computer.")
 }
 
-// function scoreTracker(func){
-//     if (func == 0)
-// }
 // Write the logic to play an entire game
 
 // function playGame(){
@@ -162,12 +159,11 @@ const scoreDisplay = document.createElement("pre");
 let initalComputerScore = 0;
 let initialPlayerScore = 0;
 
-scoreDisplay.textContent = `Computer Score : ${initalComputerScore} \n\nPlayer Score   : ${initialPlayerScore}`
-
 Menu.addEventListener("click", (event) => {
     let target = event.target;
     const computerMove = getComputerChoice();
     let playerMove;
+    let score;
     computerChoiceDisplay.textContent = `Computer's Move: ${computerMove}`;
     switch(target){
         case rockBtn:
@@ -175,26 +171,34 @@ Menu.addEventListener("click", (event) => {
             playerMove = "rock";
             playerChoiceDisplay.textContent = `Your Move: ${playerMove}`;
             // call play round
-            playRound(computerMove, playerMove);
+            score = playRound(computerMove, playerMove);
             break;
         case paperBtn:
             // call paper as player move
             playerMove = "paper";
             playerChoiceDisplay.textContent = `Your Move: ${playerMove}`;
             // call playRound
-            playRound(computerMove, playerMove);
+            score = playRound(computerMove, playerMove);
             break;
         case scissorBtn:
             // call paper as player move
             playerMove = "scissors";
             playerChoiceDisplay.textContent = `Your Move: ${playerMove}`;
             // call playRound
-            playRound(computerMove, playerMove);
+            score = playRound(computerMove, playerMove);
             break;
     }
+
+    if (score == 0){
+        initalComputerScore += 1;
+    }
+    else if (score == 1){
+        initialPlayerScore += 1;
+    }
+    scoreDisplay.textContent = `Computer Score : ${initalComputerScore} \n\nPlayer Score   : ${initialPlayerScore}`
 })
 
-// Computer Choice Display
+
 
 Menu.appendChild(rockBtn);
 Menu.appendChild(paperBtn);
