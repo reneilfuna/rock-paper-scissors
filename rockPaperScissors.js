@@ -153,7 +153,13 @@ Menu.addEventListener("click", (event) => {
 
     switch(target){
         case rockBtn:
-            console.log("rock");
+            console.log("Player chose rock!");
+            // call computer move
+            const computerMove = getComputerChoice();
+            // call rock as player move
+            const playerMove = "rock";
+            // call play round
+            playRound(computerMove, playerMove);
             break;
         case paperBtn:
             console.log("paper");
