@@ -55,7 +55,7 @@ function playRound(computerChoice, humanChoice) {
     // if computer choice = human choice
     if (computerChoice == humanChoice){
         // return "draw message"
-        console.log(`Draw! You played the same move as computer.`);
+        roundOutcome.textContent = (`Draw! You played the same move as computer.`);
         return 2;
     }
     // if computer choice beats human choice 
@@ -64,7 +64,7 @@ function playRound(computerChoice, humanChoice) {
             computerChoice == "scissors" && humanChoice == "paper"
             ) {
         // return "you lose message"
-        console.log(`You lose! ${computerChoice} beats ${humanChoice}!`);
+        roundOutcome.textContent = (`You lose! ${computerChoice} beats ${humanChoice}!`);
         // increment computer score
         return 0;
     }
@@ -74,7 +74,7 @@ function playRound(computerChoice, humanChoice) {
             humanChoice == "scissors" && computerChoice == "paper"
             ) {
         // return "you win message"
-        console.log(`You win! ${humanChoice} beats ${computerChoice}!`);
+        roundOutcome.textContent = (`You win! ${humanChoice} beats ${computerChoice}!`);
         // increment human score
         return 1;
     }
@@ -151,6 +151,8 @@ const results = document.createElement("div");
 const computerChoiceDisplay = document.createElement("pre");
 // Display choice for player move
 const playerChoiceDisplay = document.createElement("pre");
+// Display results of computer vs player choice
+const roundOutcome = document.createElement("pre");
 // Display game scores
 const scoreDisplay = document.createElement("div");
 
@@ -191,5 +193,6 @@ Menu.appendChild(paperBtn);
 Menu.appendChild(scissorBtn);
 results.appendChild(computerChoiceDisplay);
 results.appendChild(playerChoiceDisplay);
+results.appendChild(roundOutcome);
 results.appendChild(scoreDisplay);
 document.body.appendChild(results);
