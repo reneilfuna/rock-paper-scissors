@@ -143,7 +143,9 @@ function decideGame(computerFinalScore, humanFinalScore){
 const rockBtn = document.createElement("button");
 rockBtn.textContent = "ROCK";
 const paperBtn = document.createElement("button");
+paperBtn.textContent = "PAPER";
 const scissorBtn = document.createElement("button");
+scissorBtn.textContent = "SCISSORS";
 
 rockBtn.addEventListener("click", function (){
     // Call computer move
@@ -152,3 +154,5 @@ rockBtn.addEventListener("click", function (){
 });
 
 document.body.appendChild(rockBtn);
+document.body.appendChild(paperBtn);
+document.body.appendChild(scissorBtn);
