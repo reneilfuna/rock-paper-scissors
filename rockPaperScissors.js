@@ -141,6 +141,7 @@ function decideGame(computerFinalScore, humanFinalScore){
 // }
 
 const rockBtn = document.createElement("button");
+rockBtn.textContent = "ROCK";
 const paperBtn = document.createElement("button");
 const scissorBtn = document.createElement("button");
 
@@ -150,5 +151,4 @@ rockBtn.addEventListener("click", function (){
     // Call playRound
 });
 
-
-playGame();
+document.body.appendChild(rockBtn);
