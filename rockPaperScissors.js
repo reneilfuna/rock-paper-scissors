@@ -95,6 +95,9 @@ function decideGame(computerFinalScore, humanFinalScore){
         console.log("Nice try. Draw with computer.")
 }
 
+// function scoreTracker(func){
+//     if (func == 0)
+// }
 // Write the logic to play an entire game
 
 // function playGame(){
@@ -154,7 +157,12 @@ const playerChoiceDisplay = document.createElement("pre");
 // Display results of computer vs player choice
 const roundOutcome = document.createElement("pre");
 // Display game scores
-const scoreDisplay = document.createElement("div");
+const scoreDisplay = document.createElement("pre");
+
+let initalComputerScore = 0;
+let initialPlayerScore = 0;
+
+scoreDisplay.textContent = `Computer Score : ${initalComputerScore} \n\nPlayer Score   : ${initialPlayerScore}`
 
 Menu.addEventListener("click", (event) => {
     let target = event.target;
