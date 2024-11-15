@@ -140,6 +140,7 @@ function decideGame(computerFinalScore, humanFinalScore){
 // decideGame(computerScore, humanScore);
 // }
 
+const Menu = document.querySelector("div");
 const rockBtn = document.createElement("button");
 rockBtn.textContent = "ROCK";
 const paperBtn = document.createElement("button");
@@ -165,6 +166,6 @@ scissorBtn.addEventListener("click", function (){
     // Call playRound
 });
 
-document.body.appendChild(rockBtn);
-document.body.appendChild(paperBtn);
-document.body.appendChild(scissorBtn);
+Menu.appendChild(rockBtn);
+Menu.appendChild(paperBtn);
+Menu.appendChild(scissorBtn);
