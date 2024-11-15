@@ -144,5 +144,11 @@ const rockBtn = document.createElement("button");
 const paperBtn = document.createElement("button");
 const scissorBtn = document.createElement("button");
 
+rockBtn.addEventListener("click", function (){
+    // Call computer move
+    // Call Rock player choice
+    // Call playRound
+});
+
 
 playGame();
