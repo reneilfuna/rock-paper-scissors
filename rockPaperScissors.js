@@ -99,45 +99,50 @@ function decideGame(computerFinalScore, humanFinalScore){
 
 // Write the logic to play an entire game
 
-function playGame(){
-// Function to play an entire game of 5 round, 
-// keep track of score, and declare a winner.
+// function playGame(){
+// // Function to play an entire game of 5 round, 
+// // keep track of score, and declare a winner.
 
-// Initialise/Reset player scores
-    let humanScore = 0;
-    let computerScore = 0;
-// Call playRound
-// Update scores
-// x5
-for (i = 0; i < 5; i++){
-    const computerMove = getComputerChoice();
-    const humanMove = getHumanChoice();
-    if (computerMove == 3 || humanMove == 3){
-        console.log("Invalid user or computer choice!")
-        console.log("Game aborted!")
-        break;
-    }
-    console.log(`Round ${i+1}:`)
-    // playRound(computerMove, humanMove);
-    roundScore = playRound(computerMove, humanMove);
-    // check whether playRound returns computerScore or humanScore
-    if (roundScore == 0)
-        computerScore++;
-    else if (roundScore == 1)
-        humanScore++;
-    else if (roundScore != 0 && roundScore != 1 && roundScore != 2){
-        console.log('Error calculating score')
-        break;
-    }
-    console.log(`Computer Score: ${computerScore}`);
-    console.log(`Player Score: ${humanScore}`);
-    console.log("\n")
-}
-if (i != 5){
-    return;
-}
+// // Initialise/Reset player scores
+//     let humanScore = 0;
+//     let computerScore = 0;
+// // Call playRound
+// // Update scores
+// // x5
+// for (i = 0; i < 5; i++){
+//     const computerMove = getComputerChoice();
+//     const humanMove = getHumanChoice();
+//     if (computerMove == 3 || humanMove == 3){
+//         console.log("Invalid user or computer choice!")
+//         console.log("Game aborted!")
+//         break;
+//     }
+//     console.log(`Round ${i+1}:`)
+//     // playRound(computerMove, humanMove);
+//     roundScore = playRound(computerMove, humanMove);
+//     // check whether playRound returns computerScore or humanScore
+//     if (roundScore == 0)
+//         computerScore++;
+//     else if (roundScore == 1)
+//         humanScore++;
+//     else if (roundScore != 0 && roundScore != 1 && roundScore != 2){
+//         console.log('Error calculating score')
+//         break;
+//     }
+//     console.log(`Computer Score: ${computerScore}`);
+//     console.log(`Player Score: ${humanScore}`);
+//     console.log("\n")
+// }
+// if (i != 5){
+//     return;
+// }
 
-decideGame(computerScore, humanScore);
-}
+// decideGame(computerScore, humanScore);
+// }
+
+const rockBtn = document.createElement("button");
+const paperBtn = document.createElement("button");
+const scissorBtn = document.createElement("button");
+
 
 playGame();
