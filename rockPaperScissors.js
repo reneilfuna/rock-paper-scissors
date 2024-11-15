@@ -150,19 +150,19 @@ scissorBtn.textContent = "SCISSORS";
 
 Menu.addEventListener("click", (event) => {
     let target = event.target;
+    const computerMove = getComputerChoice();
 
     switch(target){
         case rockBtn:
             console.log("Player chose rock!");
-            // call computer move
-            const computerMove = getComputerChoice();
             // call rock as player move
             const playerMove = "rock";
             // call play round
             playRound(computerMove, playerMove);
             break;
         case paperBtn:
-            console.log("paper");
+            console.log("Player chose paper!");
+
             break;
         case scissorBtn:
             console.log("scissors");
