@@ -168,7 +168,11 @@ Menu.addEventListener("click", (event) => {
             playRound(computerMove, playerMove);
             break;
         case scissorBtn:
-            console.log("scissors");
+            console.log("Player chose scissors!");
+            // call paper as player move
+            playerMove = "scissors";
+            // call playRound
+            playRound(computerMove, playerMove);
             break;
     }
 })
