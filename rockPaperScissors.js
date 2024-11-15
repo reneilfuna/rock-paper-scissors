@@ -148,23 +148,21 @@ paperBtn.textContent = "PAPER";
 const scissorBtn = document.createElement("button");
 scissorBtn.textContent = "SCISSORS";
 
-rockBtn.addEventListener("click", function (){
-    // Call computer move
-    // Call Rock player choice
-    // Call playRound
-});
+Menu.addEventListener("click", (event) => {
+    let target = event.target;
 
-paperBtn.addEventListener("click", function (){
-    // Call computer move
-    // Call Paper player choice
-    // Call playRound
-});
-
-scissorBtn.addEventListener("click", function (){
-    // Call computer move
-    // Call Scissors player choice
-    // Call playRound
-});
+    switch(target){
+        case rockBtn:
+            console.log("rock");
+            break;
+        case paperBtn:
+            console.log("paper");
+            break;
+        case scissorBtn:
+            console.log("scissors");
+            break;
+    }
+})
 
 Menu.appendChild(rockBtn);
 Menu.appendChild(paperBtn);
