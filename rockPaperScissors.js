@@ -159,6 +159,12 @@ const scoreDisplay = document.createElement("pre");
 let initalComputerScore = 0;
 let initialPlayerScore = 0;
 
+document.addEventListener("DOMContentLoaded", (event) => {
+    computerChoiceDisplay.textContent = `Computer's Move:`;
+    playerChoiceDisplay.textContent =   `Your Move      :`;
+    scoreDisplay.textContent = `Computer Score : ${initalComputerScore} \n\nPlayer Score   : ${initialPlayerScore}`
+});
+
 Menu.addEventListener("click", (event) => {
     let target = event.target;
     const computerMove = getComputerChoice();
@@ -169,21 +175,21 @@ Menu.addEventListener("click", (event) => {
         case rockBtn:
             // call rock as player move
             playerMove = "rock";
-            playerChoiceDisplay.textContent = `Your Move: ${playerMove}`;
+            playerChoiceDisplay.textContent = `Your Move      : ${playerMove}`;
             // call play round
             score = playRound(computerMove, playerMove);
             break;
         case paperBtn:
             // call paper as player move
             playerMove = "paper";
-            playerChoiceDisplay.textContent = `Your Move: ${playerMove}`;
+            playerChoiceDisplay.textContent = `Your Move      : ${playerMove}`;
             // call playRound
             score = playRound(computerMove, playerMove);
             break;
         case scissorBtn:
             // call paper as player move
             playerMove = "scissors";
-            playerChoiceDisplay.textContent = `Your Move: ${playerMove}`;
+            playerChoiceDisplay.textContent = `Your Move      : ${playerMove}`;
             // call playRound
             score = playRound(computerMove, playerMove);
             break;
@@ -205,6 +211,6 @@ Menu.appendChild(paperBtn);
 Menu.appendChild(scissorBtn);
 results.appendChild(computerChoiceDisplay);
 results.appendChild(playerChoiceDisplay);
-results.appendChild(roundOutcome);
 results.appendChild(scoreDisplay);
+results.appendChild(roundOutcome);
 document.body.appendChild(results);
