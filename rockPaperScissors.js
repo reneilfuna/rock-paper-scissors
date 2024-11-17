@@ -55,7 +55,7 @@ function playRound(computerChoice, humanChoice) {
     // if computer choice = human choice
     if (computerChoice == humanChoice){
         // return "draw message"
-        roundOutcome.textContent = (`Outcome: Draw! You played the same move as computer.`);
+        roundOutcome.textContent = (`Outcome        : Draw! You played the same move as computer.`);
         return 2;
     }
     // if computer choice beats human choice 
@@ -64,7 +64,7 @@ function playRound(computerChoice, humanChoice) {
             computerChoice == "scissors" && humanChoice == "paper"
             ) {
         // return "you lose message"
-        roundOutcome.textContent = (`Outcome: You lose! ${computerChoice} beats ${humanChoice}!`);
+        roundOutcome.textContent = (`Outcome        : You lose! ${computerChoice} beats ${humanChoice}!`);
         // increment computer score
         return 0;
     }
@@ -74,7 +74,7 @@ function playRound(computerChoice, humanChoice) {
             humanChoice == "scissors" && computerChoice == "paper"
             ) {
         // return "you win message"
-        roundOutcome.textContent = (`Outcome:  You win! ${humanChoice} beats ${computerChoice}!`);
+        roundOutcome.textContent = (`Outcome        :  You win! ${humanChoice} beats ${computerChoice}!`);
         // increment human score
         return 1;
     }
@@ -211,10 +211,11 @@ Menu.addEventListener("click", (event) => {
 
     if (initalComputerScore == 5){
         endGame();
-        
+        roundOutcome.textContent = "Result         : UNLUCKY! THE COMPUTER BEAT YOU"
     }
     else if (initialPlayerScore == 5){
         endGame();
+        roundOutcome.textContent = "Result         : LUCKY! YOU BEAT THE COMPUTER!"
     }
 })
 
