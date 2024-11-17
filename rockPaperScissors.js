@@ -165,6 +165,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
     scoreDisplay.textContent = `Computer Score : ${initalComputerScore} \n\nPlayer Score   : ${initialPlayerScore}`
 });
 
+function endGame(){
+    rockBtn.disabled = true;
+    paperBtn.disabled = true;
+    scissorBtn.disabled = true;
+}
+
 Menu.addEventListener("click", (event) => {
     let target = event.target;
     const computerMove = getComputerChoice();
@@ -202,8 +208,15 @@ Menu.addEventListener("click", (event) => {
         initialPlayerScore += 1;
     }
     scoreDisplay.textContent = `Computer Score : ${initalComputerScore} \n\nPlayer Score   : ${initialPlayerScore}`
-})
 
+    if (initalComputerScore == 5){
+        endGame();
+        
+    }
+    else if (initialPlayerScore == 5){
+        endGame();
+    }
+})
 
 
 Menu.appendChild(rockBtn);
